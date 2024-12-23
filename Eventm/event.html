@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .left-section {
+            width: 50%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .right-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Light Theme */
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f5f5f5;
+                color: #333;
+            }
+            form {
+                background-color: #fff;
+            }
+            label, input {
+                color: #555;
+            }
+            input {
+                background-color: #fff;
+                border-color: #ccc;
+            }
+            button {
+                background-color: #007BFF;
+                color: white;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        }
+
+        /* Dark Theme */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f5f5f5;
+            }
+            form {
+                background-color: #1e1e1e;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            }
+            label, input {
+                color: #ccc;
+            }
+            input {
+                background-color: #2c2c2c;
+                border-color: #444;
+            }
+            button {
+                background-color: #1e88e5;
+                color: white;
+            }
+            button:hover {
+                background-color: #1565c0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section">
+        Event Registration Form
+    </div>
+    <div class="right-section">
+        <form id="eventForm">
+            <label for="eventId">Event ID:</label>
+            <input type="number" id="eventId" name="eventId" required />
+
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" required />
+
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- External JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
